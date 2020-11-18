@@ -1,13 +1,13 @@
 <html>
 <head>
 <?php include "header.php"; ?>
-
 </head>
 <body>
-<?php include "nav1.php" ?>
+<?php include "navigation1.php" ?>
 
-<form method = post class="container" style = "margin-top : 100px">
-<h2 class="text-center" style = "font-family : 'Monotype Corsiva' ; color : #E6120E ; font-weight : bold">User SignUp</h2>
+<form method = post class="container" style = "margin-top :75px">
+<h2 class="text-center" style = "font-family : 'Times New Roman' ; color : #C04000 ; font-weight : bold">User SignUp</h2>
+<hr>
 <br>
 <div class="form-group">
 <label><b>UserName</b></label>
@@ -26,7 +26,7 @@
 </body>
 </html>
 <?php 
-include "dbconfigure.php";
+include "dbconfiguration.php";
 if(isset($_POST['submit']))
 {
 $username = $_POST['username'];

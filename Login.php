@@ -12,10 +12,12 @@ include "Header.php";
 </head>
 <body>
 <?php
-include "Nav1.php";
+include "navigation1.php";
 ?>
-<div class="container"style="margin-top:50px">
-<h1 class="text-center"style="font-family:'Monotype Corsiva';color:#0099FF"> User Login </h1>
+<div class="container"style="margin-top:75px">
+<h2 class="text-center" style="font-family:'Times New Roman'; color:#C04000; font-weight:bold;"> User Login </h2>
+<hr>
+<br>
 <form method=post>
 <div class="form-group">
 <label><b>Email id</b></label>
@@ -34,7 +36,7 @@ include "Nav1.php";
 </html>
 <?php 
 session_start();
-include"DBconfigure.php";
+include"dbconfiguration.php";
 if(isset($_POST['submit']))
 {
   $emailid=$_POST['emailid'];

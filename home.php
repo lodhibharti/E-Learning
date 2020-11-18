@@ -38,20 +38,21 @@ $query="select * from notes where status='Accept'";
 $recieve=my_select($query);
 ?>
 
-<div class="container" style="margin-top:100px">
+<div class="container" style="margin-top:70px">
 <h2 class="text-center" style="font-family:'Times New Roman'; color:#C04000; font-weight:bold;">View All Notes</h2>
 <hr>
 <br>
 <br>
 <table class="table table-hover" id="example">
-<thead style = "background-color : lightblue">
+<thead style="background-color:#000000; color:#999999">
 <tr>
+<th>Sr.No.</th>
 <th>Title</th>
-<th>Category</th>
-<th>Video</th>
-<th>Thumbnail</th>
-<th>Name</th>
-<th>UploadingDate</th>
+<th>Uploaded By</th>
+<th>Uploading Date</th>
+<th>Stream</th>
+<th>Subject</th>
+<th>Type Of Notes</th>
 <th>Description</th>
 <th>Download</th>
 </tr>

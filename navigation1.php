@@ -7,7 +7,7 @@
 
 <div class="collapse navbar-collapse" id="myMenu">
 <ul class="navbar-nav pl-5 custom-nav">
-<li class="nav-item"><a href="index.php" style="color:#000000; font-weight:bold;" class="nav-link"><i class="fas fa-home"></i>&nbsp;Home</a></li>
+<li class="nav-item"><a href="home.php" style="color:#000000; font-weight:bold;" class="nav-link"><i class="fas fa-home"></i>&nbsp;Home</a></li>
 <li class="nav-item"><a href="about.php" style="color:#000000; font-weight:bold;" class="nav-link"><i class="fas fa-address-card"></i>&nbsp;About</a></li>
 <li class="nav-item"><a href="contact.php" style="color:#000000; font-weight:bold;" class="nav-link"><i class="fas fa-address-book"></i>&nbsp;Contact</a></li>
 <li class="nav-item"><a href="registration.php" style="color:#000000; font-weight:bold;" class="nav-link"><i class="fas fa-user-plus"></i>&nbsp;Registration</a></li>

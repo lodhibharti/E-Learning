@@ -16,7 +16,7 @@
 
 <!-- Website logo -->
 <div class="navbar-header">
-    <a href="home.php" class="navbar-brand" style="text-align:center; padding: 10px 0; background-color:#000000; color:white; bottom: 1%; width: 100%;">Visit All Notes</a>         
+    <a href="home.php" class="navbar-brand" style="text-align:center; padding: 10px 0; background-color:#000000; color:white; bottom:1%; width: 100%;">Visit All Notes</a>         
 </div>
 
 <!-- Main Content -->     
