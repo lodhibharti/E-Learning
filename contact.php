@@ -7,7 +7,7 @@
 <?php include "navigation1.php" ?>
 
 <div class="container" style="margin-top:75px ">
-<h2 class="text-center" style="font-family:'Times New Roman'; color:#C04000; font-weight:bold">Contact us</h2>
+<h2 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold">Contact us</h2>
 <hr>
 <br>
 <div class="row">

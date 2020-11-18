@@ -1,6 +1,6 @@
 <head>
 <title>Notes Sharing Site</title>
-<link rel="icon" href="favicon.png">
+<link rel="icon" href="assets\images\WhatsApp_Image_2020-11-15_at_11.07.35_PM-removebg-preview.png">
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">

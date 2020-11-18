@@ -15,7 +15,7 @@ include "Header.php";
 include "navigation1.php";
 ?>
 <div class="container"style="margin-top:75px">
-<h2 class="text-center" style="font-family:'Times New Roman'; color:#C04000; font-weight:bold;"> User Login </h2>
+<h2 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;"> User Login </h2>
 <hr>
 <br>
 <form method=post>
@@ -41,17 +41,17 @@ if(isset($_POST['submit']))
 {
   $emailid=$_POST['emailid'];
   $password=$_POST['password'];
-  if(isset($_POST['rem']))
+  if(isset($_POST['remember']))
   {
-    $remember = "yes";
+    $remember="yes";
   }
   else
   {
-    $remember = "no";
+    $remember="no";
   }
-  $query="select count(*) from siteuser where emailid='$emailid' and password='$password'";
+  $query="select count(*) from users where emailid='$emailid' and password='$password'";
   echo $query;
-$ans= my_one($query);
+$ans=my_one($query);
 echo "$ans";
 if($ans==1)
 {

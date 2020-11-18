@@ -11,10 +11,10 @@ global $dbserver,$dbuser,$dbpassword,$dbname;
 $connection_id=mysqli_connect($dbserver,$dbuser,$dbpassword,$dbname) or die("connection failed");
 
 //mysqli_select_db($dbname,$cid);
-mysqli_query($connnection_id,$query);
+mysqli_query($connection_id,$query);
 $a=mysqli_affected_rows($connection_id);
 mysqli_close($connection_id);
-return $n;
+return $a;
 }
 
 

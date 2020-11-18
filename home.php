@@ -32,16 +32,13 @@ $(document).ready(function() {
 <?php 
 include "navigation1.php";
 ?>
-
 <?php include "dbconfiguration.php"; 
 $query="select * from notes where status='Accept'";
 $recieve=my_select($query);
 ?>
-
 <div class="container" style="margin-top:70px">
-<h2 class="text-center" style="font-family:'Times New Roman'; color:#C04000; font-weight:bold;">View All Notes</h2>
+<h2 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;">View All Notes</h2>
 <hr>
-<br>
 <br>
 <table class="table table-hover" id="example">
 <thead style="background-color:#000000; color:#999999">
@@ -58,8 +55,11 @@ $recieve=my_select($query);
 </tr>
 </thead>
 <tbody>
+
+
 <?php 
-while($row=mysqli_fetch_array($recieve))
+
+/*while($row=mysqli_fetch_array($recieve))
 {
 echo "<tr>";
 echo "<td>$row[1]</td>";
@@ -79,7 +79,9 @@ echo "<td>$row[7]</td>";
 echo "<td><a href='$row[3]' class='btn btn-danger' download>Download</a></td>";
 echo "</tr>";
 }
+
 ?>
+*/
 </tbody>
 </table>
 </div>

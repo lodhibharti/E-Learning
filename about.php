@@ -11,7 +11,7 @@
 <body>
 <?php include"navigation1.php" ?>
 <div class="container" style="margin-top:75px">
-<h2 class="text-center" style="font-family:'Times New Roman'; color:#C04000; font-weight:bold;">About</h2>
+<h2 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;">About</h2>
 <hr>
 <h5 class="text-center" style="font-weight:bold;margin-top:30px;font-family:'Comic Sans MS'; font-size:35px">Hello,Welcome To E-Learning!</h5>
 <br>

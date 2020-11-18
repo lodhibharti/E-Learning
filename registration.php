@@ -6,7 +6,7 @@
 <?php include "navigation1.php" ?>
 
 <form method = post class="container" style = "margin-top :75px">
-<h2 class="text-center" style = "font-family : 'Times New Roman' ; color : #C04000 ; font-weight : bold">User SignUp</h2>
+<h2 class="text-center" style = "font-family : 'cooper' ; color : #C04000 ; font-weight : bold">User SignUp</h2>
 <hr>
 <br>
 <div class="form-group">
@@ -34,8 +34,8 @@ $password = $_POST['password'];
 $emailid = $_POST['emailid'];
 $contact = $_POST['contact'];
 
-$query = "insert into user values('$username','$password','$emailid','$contact')";
-$n = my_iud($query);
+$query="insert into users values('$username','$password','$emailid','$contact')";
+$n=my_iud($query);
 if($n==1)
 {
 echo '<script>alert("SignUp Successful");
@@ -44,7 +44,7 @@ window.location="login.php";
 }
 else
 {
-echo '<script>alert("Something Went Wrong , Try Again")</script>';
+echo'<script>alert("Something Went Wrong , Try Again")</script>';
 }
 }
 ?>
