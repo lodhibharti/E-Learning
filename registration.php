@@ -85,16 +85,16 @@ if(isset($_POST['submit']))
  }
  $Answer=$_POST['ans'];
  
- $query="insert into users values('$First_name','$Last_name','$Email_id','$PASSWORD','$Confirm_password','$Contact','$City','$Address',$Security_question','$Answer','$Occupation')";
+ $query="insert into users values('$First_name','$Last_name','$Email_id','$Password','$Confirm_password','$Contact','$City','$Address',$Security_question','$Answer','$Occupation')";
 my_iud($query);
-$n=my_iud($query);
-if($n!=1)
+$a=my_iud($query);
+if($a!=1)
 {
-    echo '<script>alert("Ragistration Successfully Done")</script>';
+    echo'<script>alert("Ragistration Successfully Done")</script>';
 }
 else
 {
-    echo '<script>alert("Somthing went to wrong");</script>';
+    echo'<script>alert("Somthing went to wrong");</script>';
 }
 }
 ?>
