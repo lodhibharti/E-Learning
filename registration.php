@@ -67,15 +67,15 @@ include"DBconfiguration.php";
 if(isset($_POST['submit']))
 {
  $First_name=$_POST['fname'];
- $last_name=$_POST['lname'];
- $email_id=$_POST['Email'];
- $PASSWORD=$_POST['password'];
- $confirm_password=$_POST['cpassword'];
- $contact=$_POST['contact'];
- $city=$_POST['city'];
- $address=$_POST['address'];
- $occupation=$_POST['occupation'];
- $security_question=$_POST['security_question'];
+ $Last_name=$_POST['lname'];
+ $Email_id=$_POST['Email'];
+ $Password=$_POST['password'];
+ $Confirm_password=$_POST['cpassword'];
+ $Contact=$_POST['contact'];
+ $City=$_POST['city'];
+ $Address=$_POST['address'];
+ $Occupation=$_POST['occupation'];
+ $Security_question=$_POST['security_question'];
  
  $query="select * from question";
  $recieve=my_select($query);
@@ -83,16 +83,14 @@ if(isset($_POST['submit']))
  {
    echo"<option value='$row[0]'</option>";
  }
- $answer=$_POST['ans'];
+ $Answer=$_POST['ans'];
  
- $query="insert into users values('$First_name','$last_name','$email_id','$PASSWORD','$confirm_password','$contact','$city','$address','$security_question','$answer')";
+ $query="insert into users values('$First_name','$Last_name','$Email_id','$PASSWORD','$Confirm_password','$Contact','$City','$Address',$Security_question','$Answer','$Occupation')";
 my_iud($query);
 $n=my_iud($query);
 if($n!=1)
 {
-    echo '<script>alert("Sign Up successful");
-    window.location="login.php";
-    </script>';
+    echo '<script>alert("Ragistration Successfully Done")</script>';
 }
 else
 {
