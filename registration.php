@@ -1,50 +1,102 @@
 <html>
 <head>
-<?php include "header.php"; ?>
+<?php 
+include "Header.php";
+?>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php include "navigation1.php" ?>
-
-<form method = post class="container" style = "margin-top :75px">
-<h2 class="text-center" style = "font-family : 'cooper' ; color : #C04000 ; font-weight : bold">User SignUp</h2>
+<?php
+include "navigation1.php";
+?>
+<div class="container" style="margin-top:75px">
+<h1 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;">User Ragistration</h1>
 <hr>
 <br>
+<form method="post">
 <div class="form-group">
-<label><b>UserName</b></label>
- <input type = text name='username' class="form-control" placeholder="Enter Your Name Here"> 
- <label><b>Password</b></label>
- <input type = password name='password' class="form-control" placeholder="Enter Password"> 
- <label><b>EmailID</b></label>
- <input type = email name='emailid' class="form-control" placeholder="Enter Your Email Here"> 
- <label><b>Contact</b></label>
- <input type = text name='contact' class="form-control" placeholder="Enter Your Contact Number">
+<label><b>First_Name</b></label>
+<input type="text" name="fname" class="form-control" placeholder="Enter your First Name Here">
+<label><b>Last_Name</b></label>
+<input type="text" name="lname" class="form-control" placeholder="Enter your Last Name Here">
+<label><b>EmailID</b></label>
+<input type="Email" name="Email" class="form-control" placeholder="Enter your EmailID Here">
+<label><b>Password</b></label>
+<input type="password" name="password" class="form-control" placeholder="Enter your Password">
+<label><b>Confirm_Password</b></label>
+<input type="password" name="cpassword" class="form-control" placeholder="Enter your Password">
+<label><b>Contact</b></label>
+<input type="text" name="contact" class="form-control" placeholder="Enter your Contact Number Here">
+<label><b>City</b></label>
+<input type="text" name="city" class="form-control" placeholder="Enter your city Here">
+<label><b>Address</b></label>
+<textarea name="address" class="form-control" placeholder="Enter your address Here"></textarea>
 <br>
-<input type = submit value="Submit" name = submit class='btn btn-primary'> 
+<label><b>Occupation</b></label>
+<input type="text" name="occupation" class="form-control" placeholder="Enter here">
+<br>
+<label><b>Security Question</b></label>
+ <select name="security_question">
+ <option>What is your pet name</option>
+ <option>What is your favorite food</option>
+ <option>What is your first school name</option>
+ <option>What is your nick name</option>
+ <option>What is your favorite color</option>
+</select>
+<br>  
+ <label><b>Answer</b></label>
+<input type="text" name="ans" class="form-control" placeholder="Enter your answer here">
+
+<br>
+
+<input type="submit" name="submit" value="Ragister" class="btn btn-primary">
 </div>
 </form>
-
+</div>
 </body>
 </html>
-<?php 
-include "dbconfiguration.php";
+
+
+<?php
+include"DBconfiguration.php";
 if(isset($_POST['submit']))
 {
-$username = $_POST['username'];
-$password = $_POST['password'];
-$emailid = $_POST['emailid'];
-$contact = $_POST['contact'];
-
-$query="insert into users values('$username','$password','$emailid','$contact')";
+ $First_name=$_POST['fname'];
+ $last_name=$_POST['lname'];
+ $email_id=$_POST['Email'];
+ $PASSWORD=$_POST['password'];
+ $confirm_password=$_POST['cpassword'];
+ $contact=$_POST['contact'];
+ $city=$_POST['city'];
+ $address=$_POST['address'];
+ $occupation=$_POST['occupation'];
+ $security_question=$_POST['security_question'];
+ 
+ $query="select * from question";
+ $recieve=my_select($query);
+ while($row=mysqli_fetch_array($recieve))
+ {
+   echo"<option value='$row[0]'</option>";
+ }
+ $answer=$_POST['ans'];
+ 
+ $query="insert into users values('$First_name','$last_name','$email_id','$PASSWORD','$confirm_password','$contact','$city','$address','$security_question','$answer')";
+my_iud($query);
 $n=my_iud($query);
-if($n==1)
+if($n!=1)
 {
-echo '<script>alert("SignUp Successful");
-window.location="login.php";
-</script>';
+    echo '<script>alert("Sign Up successful");
+    window.location="login.php";
+    </script>';
 }
 else
 {
-echo'<script>alert("Something Went Wrong , Try Again")</script>';
+    echo '<script>alert("Somthing went to wrong");</script>';
 }
 }
 ?>

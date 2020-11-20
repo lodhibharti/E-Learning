@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark pl-5 fixed-top" style="background-color:#34AAF4;">
 <a href="index.php" class="navbar-brand" style="font-family:'cooper'; color:#000000; font-weight:bold; font-size:29px;">Notes Sharing Site</a>
 <span class="navbar-text" style="color:#C04000; font-weight:bold; font-size:15px;">Notes Hub</span>
-<button type = button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+<button type=button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
 <span class="navbar-toggler-icon"></span>
 </button>
 

@@ -15,20 +15,20 @@ include "Header.php";
 include "navigation1.php";
 ?>
 <div class="container"style="margin-top:75px">
-<h2 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;"> User Login </h2>
+<h2 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;">User Sign In</h2>
 <hr>
 <br>
 <form method=post>
 <div class="form-group">
 <label><b>Email id</b></label>
-<input type="email"name="emailid"class="form-control"placeholder="Enter your Name">
+<input type="email" name="emailid" class="form-control" placeholder="Enter your Name">
 <label><b>Password</b></label>
 <input type="password"name="password"class="form-control"placeholder="Enter your Password">
 <br>
 <input type="checkbox"name="rem"><b>Remember Me</b>
 <br>
 <input type="submit"name="submit"value="Login"class="btn btn-primary">
-<a href="ragistration.php"class="btn btn-primary">SignUp</a>
+<a href="registration.php"class="btn btn-primary">SignUp</a>
 </div>
 </form>
 </div>
@@ -66,7 +66,7 @@ if($ans==1)
     setcookie('cemail',$emailid,time()+60*60*24*7);
     setcookie('cemail',$password,time()+60*60*24*7);
   }
-  header("location:Editprofile.php");
+  header("location:userhome.php");
 }
 else
 {

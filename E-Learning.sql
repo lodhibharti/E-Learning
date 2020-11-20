@@ -9,12 +9,16 @@ password varchar(10)
 
 insert into admin values('admin','admin');
 
-create table user 
+create table users
 (
 user_name varchar(30),
 password varchar(10),
+confirm_password varchar(10),
 email_id varchar(40) primary key,
-contact varchar(10) unique key
+contact varchar(10) unique key,
+security_question varchar(30),
+answer varchar(50);
+occupation varchar(20)
 );
 
 create table notes 

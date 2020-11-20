@@ -55,13 +55,15 @@ $recieve=my_select($query);
 </tr>
 </thead>
 <tbody>
-
+$index = 0;
 
 <?php 
 
-/*while($row=mysqli_fetch_array($recieve))
+while($row=mysqli_fetch_array($recieve))
 {
+    $index++;
 echo "<tr>";
+echo "<td>$index[1]</td>";
 echo "<td>$row[1]</td>";
 echo "<td>$row[2]</td>";
 echo "<td><video width='150' height='150' controls><source src='$row[3]' type='video/mp4'></video></td>";
@@ -81,7 +83,7 @@ echo "</tr>";
 }
 
 ?>
-*/
+
 </tbody>
 </table>
 </div>
