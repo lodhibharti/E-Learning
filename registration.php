@@ -15,7 +15,7 @@ include "Header.php";
 include "navigation1.php";
 ?>
 <div class="container" style="margin-top:75px">
-<h1 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;">User Ragistration</h1>
+<h1 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;">User Registration</h1>
 <hr>
 <br>
 <form method="post">
@@ -51,17 +51,13 @@ include "navigation1.php";
 <br>  
  <label><b>Answer</b></label>
 <input type="text" name="ans" class="form-control" placeholder="Enter your answer here">
-
 <br>
-
 <input type="submit" name="submit" value="Ragister" class="btn btn-primary">
 </div>
 </form>
 </div>
 </body>
 </html>
-
-
 <?php
 include"DBconfiguration.php";
 if(isset($_POST['submit']))
@@ -76,7 +72,6 @@ if(isset($_POST['submit']))
  $Address=$_POST['address'];
  $Occupation=$_POST['occupation'];
  $Security_question=$_POST['security_question'];
- 
  $query="select * from question";
  $recieve=my_select($query);
  while($row=mysqli_fetch_array($recieve))
@@ -84,13 +79,14 @@ if(isset($_POST['submit']))
    echo"<option value='$row[0]'</option>";
  }
  $Answer=$_POST['ans'];
- 
- $query="insert into users values('$First_name','$Last_name','$Email_id','$Password','$Confirm_password','$Contact','$City','$Address',$Security_question','$Answer','$Occupation')";
-my_iud($query);
 $a=my_iud($query);
 if($a!=1)
 {
-    echo'<script>alert("Ragistration Successfully Done")</script>';
+  $query="insert into users values('$First_name','$Last_name','$Email_id','$Password','$Confirm_password','$Contact','$City','$Address','$Security_question','$Answer','$Occupation')";
+  my_iud($query);
+  echo'<script>alert("Ragistration Successfully Done");
+  window.location="login.php";
+  </script>';
 }
 else
 {
