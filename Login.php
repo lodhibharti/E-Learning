@@ -27,8 +27,8 @@ include "navigation1.php";
 <br>
 <input type="checkbox"name="rem"><b>Remember Me</b>
 <br>
-<input type="submit"name="submit"value="Login"class="btn btn-primary">
-<a href="registration.php"class="btn btn-primary">SignUp</a>
+<input type="submit" name="submit" value="Login" class="btn btn-primary">
+<a href="registration.php" class="btn btn-primary">SignUp</a>
 </div>
 </form>
 </div>
@@ -39,9 +39,12 @@ session_start();
 include"dbconfiguration.php";
 if(isset($_POST['submit']))
 {
-  $emailid=$_POST['emailid'];
-  $password=$_POST['password'];
-  if(isset($_POST['remember']))
+  $Email_id=$_POST['emailid'];
+  $Password=$_POST['password'];
+
+  echo $Email_id.$Password;
+
+  /*if(isset($_POST['remember']))
   {
     $remember="yes";
   }
@@ -49,22 +52,30 @@ if(isset($_POST['submit']))
   {
     $remember="no";
   }
-  $query="select count(*) from users where emailid='$emailid' and password='$password'";
-  echo $query;
-$ans=my_one($query);
-echo "$ans";
-if($ans==1)
-{
-  $_SESSION['semail']=$emailid;
-  $_SESSION['spassword']=$password;
+  */ 
+  $query="select count(*) from users where Email_id='$Email_id' and Password='$Password'";
 
-  $_SESSION['sun']=$emailid;
-  $_SESSION['spwd']=$password;
+$a=my_one($query);
+echo $a;
+if($a==1)
+{
+  echo'<script>alert("Login Done Successfully")</script>';
+}
+else{
+  echo'<script>alert("invalid login credentials,Try again")</script>';
+}
+/*if($a==1)
+{
+  $_SESSION['semail']=$Email_id;
+  $_SESSION['spassword']=$Password;
+
+  $_SESSION['sun']=$Email_id;
+  $_SESSION['spwd']=$Password;
 
   if($remember=='yes')
   {
-    setcookie('cemail',$emailid,time()+60*60*24*7);
-    setcookie('cemail',$password,time()+60*60*24*7);
+    setcookie('cemail',$Email_id,time()+60*60*24*7);
+    setcookie('cemail',$Password,time()+60*60*24*7);
   }
   header("location:userhome.php");
 }
@@ -72,5 +83,7 @@ else
 {
   echo'<script>alert("invalid login credentials,Try again")</script>';
 }
+}
+*/
 }
 ?>

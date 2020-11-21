@@ -14,6 +14,7 @@ include "Header.php";
 <?php
 include "navigation1.php";
 ?>
+
 <div class="container" style="margin-top:75px">
 <h1 class="text-center" style="font-family:'cooper'; color:#C04000; font-weight:bold;">User Registration</h1>
 <hr>

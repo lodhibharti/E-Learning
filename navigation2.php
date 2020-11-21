@@ -7,13 +7,13 @@
 
 <div class="collapse navbar-collapse" id="myMenu">
 <ul class="navbar-nav pl-5 custom-nav">
-<li class="nav-item"><a href="userhome.php" style="color:#000000" class="nav-link"><i class="fas fa-home"></i>&nbsp;Home</a></li>
+<li class="nav-item"><a href="index.php" style="color:#000000" class="nav-link"><i class="fas fa-home"></i>&nbsp;Home</a></li>
 <li class="nav-item"><a href="viewallnotes.php" style="color:#000000" class="nav-link"><i class="fab fa-youtube"></i>&nbsp;View All Notes</a></li>
 <li class="nav-item"><a href="uploadnotes.php" style="color:#000000" class="nav-link"><i class="fas fa-upload"></i>&nbsp;Upload Notes</a></li>
 <li class="nav-item"><a href="viewmynotes.php" style="color:#000000" class="nav-link"><i class="fab fa-youtube"></i>&nbsp;View My Notes</a></li>
 
-<li class="nav-item"><a href="changepassword.php" style="color:#000000" class="nav-link"><i class="fab fa-youtube"></i>&nbsp;Change Password</a></li>
-
+<!-- <li class="nav-item"><a href="changepassword.php" style="color:#000000" class="nav-link"><i class="fab fa-youtube"></i>&nbsp;Change Password</a></li>
+-->
 <li class="nav-item"><a href="Logout.php" style="color:#000000" class="nav-link"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a></li>
 </ul>
 </div>

@@ -33,12 +33,11 @@ function my_one($query)
 {
 global $dbserver,$dbuser,$dbpassword,$dbname;
 $connection_id=mysqli_connect($dbserver,$dbuser,$dbpassword,$dbname) or die("connection failed");
-//mysql_select_db($dbname,$cid);
+//mysqli_select_db($dbname,$connection_id);
 $recieve=mysqli_query($connection_id,$query);
-$row=mysqli_fetch_array($recieve,MYSQLI_NUM);
-
+$row=mysqli_fetch_array($recieve);
 mysqli_close($connection_id);
-return $row[0];
+return $row;
 }
 
 
