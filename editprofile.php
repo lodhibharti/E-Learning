@@ -60,7 +60,7 @@ echo "<br><br><br><div><b>&nbsp;Welcome</b><b style='text-transform:capitalize; 
 </form>
 </body>
 </html>
-<?php 
+<?php
 if(isset($_POST['submit']))
 {
 $username1 = $_POST['username'];
