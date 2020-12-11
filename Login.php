@@ -44,7 +44,7 @@ if(isset($_POST['submit']))
 
   echo $Email_id.$Password;
 
-  /*if(isset($_POST['remember']))
+  if(isset($_POST['remember']))
   {
     $remember="yes";
   }
@@ -52,19 +52,14 @@ if(isset($_POST['submit']))
   {
     $remember="no";
   }
-  */ 
-  $query="select count(*) from users where Email_id='$Email_id' and Password='$Password'";
-
+   
+  $query="select count(*) from users where Email_id='$Email_id' and Password='$Password';";
+  
 $a=my_one($query);
+settype($a, "integer");
 echo $a;
+
 if($a==1)
-{
-  echo'<script>alert("Login Done Successfully")</script>';
-}
-else{
-  echo'<script>alert("invalid login credentials,Try again")</script>';
-}
-/*if($a==1)
 {
   $_SESSION['semail']=$Email_id;
   $_SESSION['spassword']=$Password;
@@ -84,7 +79,14 @@ else
   echo'<script>alert("invalid login credentials,Try again")</script>';
 }
 }
-*/
 
+
+if($a==1)
+{
+  echo'<script>alert("Login Done Successfully")</script>';
 }
+else{
+  echo'<script>alert("invalid login credentials,Try again")</script>';
+}
+
 ?>
